@@ -1,0 +1,26 @@
+<tareas>
+  <tarea codigo="EDA1-Ex4">
+    <descripcion>Examen 4 de EDA</descripcion>
+    <hestimadas>5</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion />
+  </tarea>
+  <tarea codigo="EDA20-Ej1">
+    <descripcion>Ejercicio sobre listas ligadas</descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <explotacion />
+  </tarea>
+  <tarea codigo="EDA20-Ex1">
+    <descripcion>examen</descripcion>
+    <hestimadas>12</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion />
+  </tarea>
+  <tarea codigo="EDA20-Ex2">
+    <descripcion>examen</descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion />
+  </tarea>
+</tareas>

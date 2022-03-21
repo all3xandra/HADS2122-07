@@ -11,7 +11,7 @@ namespace Presentacion
 {
 
 
-    public partial class GestionTareas
+    public partial class ImportarXML
     {
 
         /// <summary>
@@ -22,15 +22,6 @@ namespace Presentacion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
         /// Control Label1.
@@ -51,15 +42,6 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control LinkButton2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
-
-        /// <summary>
         /// Control Label3.
         /// </summary>
         /// <remarks>
@@ -69,13 +51,13 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control listAsignaturas.
+        /// Control import_list.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listAsignaturas;
+        protected global::System.Web.UI.WebControls.DropDownList import_list;
 
         /// <summary>
         /// Control SqlDataSource1.
@@ -87,39 +69,39 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Control Button1.
+        /// Control Xml_Table.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Xml Xml_Table;
 
         /// <summary>
-        /// Control GridView1.
+        /// Control insercion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label insercion;
 
         /// <summary>
-        /// Control SqlDataSource2.
+        /// Control importar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.Button importar;
 
         /// <summary>
-        /// Control Button2.
+        /// Control volver.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button volver;
     }
 }

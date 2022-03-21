@@ -76,14 +76,21 @@
     <Content Include="Alumno.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Alumno.aspx</BrowseToURL>
     </Content>
+    <Content Include="App_Data\HAS.xml" />
+    <Content Include="App_Data\SEG.xml" />
+    <Content Include="App_Data\VerTablaTareas.xsl" />
     <Content Include="CambiarPassword.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/CambiarPassword.aspx</BrowseToURL>
     </Content>
     <Content Include="Confirmar.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Confirmar.aspx</BrowseToURL>
     </Content>
+    <Content Include="Exportar.aspx" />
     <Content Include="GestionTareas.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/GestionTareas.aspx</BrowseToURL>
+    </Content>
+    <Content Include="ImportarXML.aspx">
+      <BrowseToURL>ImportarXML.aspx</BrowseToURL>
     </Content>
     <Content Include="Inicio.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Inicio.aspx</BrowseToURL>
@@ -130,12 +137,26 @@
     <Compile Include="Confirmar.aspx.designer.cs">
       <DependentUpon>Confirmar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exportar.aspx.cs">
+      <DependentUpon>Exportar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exportar.aspx.designer.cs">
+      <DependentUpon>Exportar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GestionTareas.aspx.cs">
       <DependentUpon>GestionTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GestionTareas.aspx.designer.cs">
       <DependentUpon>GestionTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarXML.aspx.cs">
+      <DependentUpon>ImportarXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarXML.aspx.designer.cs">
+      <DependentUpon>ImportarXML.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
@@ -189,6 +210,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Data\tareas.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\hads22-07 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\hads22-07 - Web Deploy.pubxml" />

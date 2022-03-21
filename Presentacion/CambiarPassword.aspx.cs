@@ -10,7 +10,6 @@ namespace Presentacion
     public partial class CambiarPassword : System.Web.UI.Page
     {
         private LogicaNegocio.LN ln = new LogicaNegocio.LN();
-        private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
 
         public object MessageBox { get; private set; }
 

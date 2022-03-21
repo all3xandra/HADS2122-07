@@ -263,6 +263,32 @@ namespace AccesoDatos
             }
         }
 
+        public bool insertTareaConExplotacion(String codigo, String descripcion, String codAsig, int hEstimadas, bool explotacion, String tipoTarea)
+        {
+            String sql = "INSERT INTO TareaGenerica VALUES(@codigo, @descripcion, @codAsig, @hEstimadas, @explotacion, @tipoTarea)";
+            SqlCommand sqlCmd = new SqlCommand(sql, connection);
+
+            sqlCmd.Parameters.AddWithValue("@codigo", codigo);
+            sqlCmd.Parameters.AddWithValue("@descripcion", descripcion);
+            sqlCmd.Parameters.AddWithValue("@codAsig", codAsig);
+            sqlCmd.Parameters.AddWithValue("@hEstimadas", hEstimadas);
+            sqlCmd.Parameters.AddWithValue("@tipoTarea", tipoTarea);
+            sqlCmd.Parameters.AddWithValue("@explotacion", explotacion);
+            try
+            {
+
+                sqlCmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch (Exception e)
+            {
+
+                return false;
+
+            }
+        }
+
         public bool instanciarTareaAlumno(String email, String cod, int estimadas, int reales)
         {
             String sql = "INSERT INTO EstudianteTarea VALUES (@email, @codTarea, @hEstimadas, @hReales)";
@@ -307,5 +333,33 @@ namespace AccesoDatos
             return asignaturas;
         }
 
+        public SqlDataAdapter getTareasFromDLL(String codAsig, String email)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TG.codigo, TG.descripcion, TG.hEstimadas, TG.explotacion, TG.tipoTarea " +
+                "FROM TareaGenerica AS TG INNER JOIN GrupoClase ON TG.codAsig = GrupoClase.codigoAsig INNER JOIN ProfesorGrupo ON ProfesorGrupo.codigoGrupo = GrupoClase.codigo " +
+                "WHERE TG.codAsig = @codAsig AND ProfesorGrupo.email = @email", connection);
+
+            da.SelectCommand.Parameters.AddWithValue("@codAsig", codAsig);
+            da.SelectCommand.Parameters.AddWithValue("@email", email);
+
+            return da;
+        }
+        
+        /*
+        public SqlDataAdapter getTareasFromDLL(String codAsig, Boolean explotacion, String email)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * " +
+            "FROM TareaGenerica INNER JOIN GrupoClase ON TareaGenerica.codAsig = GrupoClase.codigoAsig INNER JOIN ProfesorGrupo ON ProfesorGrupo.codigoGrupo = GrupoClase.codigo " +
+            "WHERE TareaGenerica.codAsig = @codAsig AND ProfesorGrupo.email = @email AND TareaGenerica.explotacion = @explotacion", connection);
+
+            da.SelectCommand.Parameters.AddWithValue("@codAsig", "%" + codAsig + "%");
+            da.SelectCommand.Parameters.AddWithValue("@email", "%" + email + "%");
+            da.SelectCommand.Parameters.AddWithValue("@explotacion", "%" + explotacion + "%");
+
+            return da;
+        }
+        */
+
     }
+
 }

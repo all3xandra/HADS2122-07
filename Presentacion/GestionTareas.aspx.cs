@@ -18,5 +18,10 @@ namespace Presentacion
         {
             Session.Abandon();
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://hads22-07.azurewebsites.net/Profesor.aspx");
+        }
     }
 }

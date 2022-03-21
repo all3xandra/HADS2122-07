@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
+using System.Data.SqlClient;
 
 namespace LogicaNegocio
 {
@@ -156,6 +157,14 @@ namespace LogicaNegocio
             return resul;
         }
 
+        public bool insertTareaConExplotacion(String codigo, String descripcion, String codAsig, int hEstimadas, bool explotacion, String tipoTarea)
+        {
+            bd.open();
+            bool resul = bd.insertTareaConExplotacion(codigo, descripcion, codAsig, hEstimadas, explotacion, tipoTarea);
+            bd.close();
+            return resul;
+        }
+
         public bool instanciarTareaAlumno(String email, String cod, int estimadas, int reales)
         {
             bd.open();
@@ -171,5 +180,15 @@ namespace LogicaNegocio
             bd.close();
             return resul;
         }
+
+        public SqlDataAdapter getTareasFromDLL(String codAsig, String email)
+        {
+            bd.open();
+            SqlDataAdapter da = bd.getTareasFromDLL(codAsig, email);
+            bd.close();
+            return da;
+        }
+
+
     }
 }

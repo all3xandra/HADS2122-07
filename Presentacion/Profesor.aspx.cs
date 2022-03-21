@@ -13,5 +13,10 @@ namespace Presentacion
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://hads22-07.azurewebsites.net/ImportarXML.aspx");
+        }
     }
 }

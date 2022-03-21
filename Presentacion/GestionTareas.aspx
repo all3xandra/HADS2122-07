@@ -80,6 +80,7 @@
                     <asp:Parameter Name="original_tipoTarea" Type="String" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Volver" />
             <br />
         </div>
     </form>

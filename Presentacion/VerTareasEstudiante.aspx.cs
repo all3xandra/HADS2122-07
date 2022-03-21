@@ -24,7 +24,7 @@ namespace Presentacion
         {
             if (Page.IsPostBack)
             {
-                // dsTareas = (DataSet)Session["tareas_genericas"];
+                // dsTareas = Session["tareas_genericas"];
                 
             }
             else
@@ -80,6 +80,12 @@ namespace Presentacion
             String he = GridView1.SelectedRow.Cells[3].Text;
 
             Response.Redirect("http://hads22-07.azurewebsites.net/InstanciarTareaEstudiante.aspx?codigo=" + codigo + "&he=" + he);
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("http://hads22-07.azurewebsites.net/Inicio.aspx");
         }
     }
 }
