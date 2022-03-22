@@ -27,7 +27,7 @@
             <br />
             <asp:Button ID="Button1" runat="server" Text="EXPORTAR XML" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" Text="EXPORTAR JSON" />
+            <asp:Button ID="Button2" runat="server" Text="EXPORTAR JSON" OnClick="Button2_Click1" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;<br />
