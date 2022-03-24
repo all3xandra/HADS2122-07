@@ -24,7 +24,7 @@ namespace Presentacion
         private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["email"] = "vadillo@ehu.es";
+            
 
             dapTareas = ln.getTareasFromDLL(export_list.SelectedValue, Session["email"].ToString());
 
