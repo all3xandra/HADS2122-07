@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace LogicaNegocio
 {
@@ -12,6 +13,7 @@ namespace LogicaNegocio
     {
 
         private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
+        private MD5 hash = MD5.Create();
 
         /// <summary>
         /// método que realiza el envió de correo electronico.
@@ -45,6 +47,12 @@ namespace LogicaNegocio
             }
         }
 
+        private String getHash(String text)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(text);
+            return Encoding.ASCII.GetString(hash.ComputeHash(bytes));
+        }
+
         /// <summary>
         /// método que realiza una llamada al método de insertar datos de la base de datos.
         /// </summary>
@@ -57,8 +65,9 @@ namespace LogicaNegocio
         /// <returns>true correcto insert de datos. |false fallo en insertar datos.</returns>
         public Boolean insertUser(String email, String nombre, String apellidos, int numconfir, String tipo, String pass)
         {
+            String hash_pass = getHash(pass);
             bd.open();
-            bool resul = bd.insertUser(email, nombre, apellidos, numconfir, tipo, pass);
+            bool resul = bd.insertUser(email, nombre, apellidos, numconfir, tipo, hash_pass);
             bd.close();
             return resul;
         }

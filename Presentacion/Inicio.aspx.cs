@@ -27,7 +27,8 @@ namespace Presentacion
         {
             if (ln.searchEmail(correo_text.Text))
             {
-                if (psw_text.Text.Equals(ln.getPassword(correo_text.Text)))
+                string psw_hash = ln.getHash(psw_text);
+                if (psw_hash.Equals(ln.getPassword(correo_text.Text)))
                 {
                     if (ln.getConfirmed(correo_text.Text))
                     {
