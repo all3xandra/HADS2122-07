@@ -13,6 +13,7 @@ namespace LogicaNegocio
     {
 
         private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
+        private MD5 hash = MD5.Create();
 
         /// <summary>
         /// método que realiza el envió de correo electronico.
@@ -44,6 +45,12 @@ namespace LogicaNegocio
                 Console.WriteLine(ex.ToString());
                 return false;
             }
+        }
+
+        private String getHash(String text)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(text);
+            return Encoding.ASCII.GetString(hash.ComputeHash(bytes));
         }
 
         /// <summary>

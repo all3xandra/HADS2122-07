@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Xml;
-
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Presentacion
 {
@@ -23,7 +24,7 @@ namespace Presentacion
         private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["email"] = "vadillo@ehu.es";
+            
 
             dapTareas = ln.getTareasFromDLL(export_list.SelectedValue, Session["email"].ToString());
 
@@ -43,6 +44,17 @@ namespace Presentacion
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
+            dtTareas.DataSet.DataSetName= "tareas";
+            dtTareas.TableName = "tarea";
+            dtTareas.Columns[0].ColumnMapping = MappingType.Attribute;
+            dtTareas.Columns[2].ColumnName = "hestimadas";
+            dtTareas.Columns[4].ColumnName = "tipotarea";
+            dtTareas.Columns[3].SetOrdinal(dtTareas.Columns.Count - 1);
+
+            dsTareas.WriteXml(Server.MapPath("App_Data/") + export_list.SelectedValue + ".xml");
+            exportado.Text = "XML Exportado";
+            /*
             XmlElement root = doc.CreateElement("tareas");
             doc.AppendChild(root);
 
@@ -78,16 +90,26 @@ namespace Presentacion
             doc.Save(@Server.MapPath("App_Data/") + export_list.SelectedValue + ".xml");
             exportado.Text = "Exportado";
             //doc.WriteXML(Server.MapPath("App_Data"));
-
+            */
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click1(object sender, EventArgs e)
         {
+            dtTareas.DataSet.DataSetName = "tareas";
+            dtTareas.TableName = "tarea";
+            dtTareas.Columns[0].ColumnMapping = MappingType.Attribute;
+            dtTareas.Columns[2].ColumnName = "hestimadas";
+            dtTareas.Columns[4].ColumnName = "tipotarea";
+            dtTareas.Columns[3].SetOrdinal(dtTareas.Columns.Count - 1);
 
-            /* 
-             
-             
-                */
+            string json = JsonConvert.SerializeObject(dtTareas);
+            using (var u = new StreamWriter(Server.MapPath("App_Data/" + export_list.Text + ".json"), true))
+            {
+                u.WriteLine(json.ToString());
+                u.Close();
+                exportado.Text = "Json Exportado.";
+            }
+
         }
     }
 }
