@@ -13,6 +13,7 @@ namespace LogicaNegocio
     {
 
         private AccesoDatos.BBDD bd = new AccesoDatos.BBDD();
+        private MD5 hash = MD5.Create();
 
         /// <summary>
         /// método que realiza el envió de correo electronico.
@@ -46,6 +47,12 @@ namespace LogicaNegocio
             }
         }
 
+        private String getHash(String text)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(text);
+            return Encoding.ASCII.GetString(hash.ComputeHash(bytes));
+        }
+
         /// <summary>
         /// método que realiza una llamada al método de insertar datos de la base de datos.
         /// </summary>
@@ -71,21 +78,6 @@ namespace LogicaNegocio
         /// </summary>
         /// <param name="email"></param>
         /// <returns>codigo de password</returns>
-        /// 
-        public String getHash(String text)
-        {
-            using (var md5Hash = MD5.Create())
-            {
-                // Byte array representation of source string
-                var sourceBytes = Encoding.UTF8.GetBytes(text);
-                // Generate hash value(Byte Array) for input data
-                var hashBytes = md5Hash.ComputeHash(sourceBytes);
-                // Convert hash byte array to string
-                String hash = BitConverter.ToString(hashBytes).Replace("-", string.Empty);
-                return hash.ToLower();
-            }
-        }
-
         public void updateCodpass(String email)
         {
             bd.open();

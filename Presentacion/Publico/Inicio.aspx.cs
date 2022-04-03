@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -27,7 +28,8 @@ namespace Presentacion
         {
             if (ln.searchEmail(correo_text.Text))
             {
-                if (psw_text.Text.Equals(ln.getPassword(correo_text.Text)))
+                string psw_hash = ln.getHash(psw_text.Text);
+                if (psw_hash.Equals(ln.getPassword(correo_text.Text)))
                 {
                     if (ln.getConfirmed(correo_text.Text))
                     {
@@ -35,13 +37,14 @@ namespace Presentacion
                         String tipo = ln.getRol(correo_text.Text);
                         if (tipo.Equals("Alumno"))
                         {
+                            FormsAuthentication.SetAuthCookie("alumno", false);//false = cookie tmp
                             Response.Redirect("http://hads22-07.azurewebsites.net/Alumno.aspx");
                         }
                         else
                         {
+                            FormsAuthentication.SetAuthCookie("profesor", false);//false = cookie tmp
                             Response.Redirect("http://hads22-07.azurewebsites.net/Profesor.aspx");
                         }
-
                     }
                     else
                     {
@@ -51,6 +54,7 @@ namespace Presentacion
                 }
                 else
                 {
+                    invalidpw.Text = "Contraseña insertada: " + psw_text.Text + ", encriptada: " + psw_hash + " y getPassword: " + psw_hash;
                     error_login.Text = "Contraseña no válida";
                 }
             }
