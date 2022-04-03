@@ -73,138 +73,138 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Privado\Alumno\Alumno.aspx">
+    <Content Include="Private\Alumno\Alumno.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Alumno.aspx</BrowseToURL>
     </Content>
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\VerTablaTareas.xsl" />
-    <Content Include="Publico\CambiarPassword.aspx">
+    <Content Include="Public\CambiarPassword.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/CambiarPassword.aspx</BrowseToURL>
     </Content>
-    <Content Include="Publico\Confirmar.aspx">
+    <Content Include="Public\Confirmar.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Confirmar.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Profesor\Exportar.aspx" />
-    <Content Include="Privado\Profesor\GestionTareas.aspx">
+    <Content Include="Private\Profesor\Exportar.aspx" />
+    <Content Include="Private\Profesor\GestionTareas.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/GestionTareas.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Profesor\ImportarXML.aspx">
+    <Content Include="Private\Profesor\ImportarXML.aspx">
       <BrowseToURL>ImportarXML.aspx</BrowseToURL>
     </Content>
-    <Content Include="Publico\Inicio.aspx">
+    <Content Include="Public\Inicio.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Inicio.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Profesor\InsertarTareaGenerica.aspx">
+    <Content Include="Private\Profesor\InsertarTareaGenerica.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/InsertarTareaGenerica.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Alumno\InstanciarTareaEstudiante.aspx">
+    <Content Include="Private\Alumno\InstanciarTareaEstudiante.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/InstanciarTareaEstudiante.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Profesor\Profesor.aspx">
+    <Content Include="Private\Profesor\Profesor.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Profesor.aspx</BrowseToURL>
     </Content>
-    <Content Include="Publico\Registro.aspx">
+    <Content Include="Public\Registro.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/Registro.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Profesor\VerEstadisticas.aspx">
+    <Content Include="Private\Profesor\VerEstadisticas.aspx">
       <BrowseToURL>VerEstadisticas.aspx</BrowseToURL>
     </Content>
-    <Content Include="Privado\Alumno\VerTareasEstudiante.aspx">
+    <Content Include="Private\Alumno\VerTareasEstudiante.aspx">
       <BrowseToURL>http://hads22-07.azurewebsites.net/VerTareasEstudiante.aspx</BrowseToURL>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Privado\Alumno\Alumno.aspx.cs">
+    <Compile Include="Private\Alumno\Alumno.aspx.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Alumno\Alumno.aspx.designer.cs">
+    <Compile Include="Private\Alumno\Alumno.aspx.designer.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Publico\CambiarPassword.aspx.cs">
+    <Compile Include="Public\CambiarPassword.aspx.cs">
       <DependentUpon>CambiarPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Publico\CambiarPassword.aspx.designer.cs">
+    <Compile Include="Public\CambiarPassword.aspx.designer.cs">
       <DependentUpon>CambiarPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Publico\Confirmar.aspx.cs">
+    <Compile Include="Public\Confirmar.aspx.cs">
       <DependentUpon>Confirmar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Publico\Confirmar.aspx.designer.cs">
+    <Compile Include="Public\Confirmar.aspx.designer.cs">
       <DependentUpon>Confirmar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\Exportar.aspx.cs">
+    <Compile Include="Private\Profesor\Exportar.aspx.cs">
       <DependentUpon>Exportar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\Exportar.aspx.designer.cs">
+    <Compile Include="Private\Profesor\Exportar.aspx.designer.cs">
       <DependentUpon>Exportar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\GestionTareas.aspx.cs">
+    <Compile Include="Private\Profesor\GestionTareas.aspx.cs">
       <DependentUpon>GestionTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\GestionTareas.aspx.designer.cs">
+    <Compile Include="Private\Profesor\GestionTareas.aspx.designer.cs">
       <DependentUpon>GestionTareas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\ImportarXML.aspx.cs">
+    <Compile Include="Private\Profesor\ImportarXML.aspx.cs">
       <DependentUpon>ImportarXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\ImportarXML.aspx.designer.cs">
+    <Compile Include="Private\Profesor\ImportarXML.aspx.designer.cs">
       <DependentUpon>ImportarXML.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Publico\Inicio.aspx.cs">
+    <Compile Include="Public\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Publico\Inicio.aspx.designer.cs">
+    <Compile Include="Public\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\InsertarTareaGenerica.aspx.cs">
+    <Compile Include="Private\Profesor\InsertarTareaGenerica.aspx.cs">
       <DependentUpon>InsertarTareaGenerica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\InsertarTareaGenerica.aspx.designer.cs">
+    <Compile Include="Private\Profesor\InsertarTareaGenerica.aspx.designer.cs">
       <DependentUpon>InsertarTareaGenerica.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Alumno\InstanciarTareaEstudiante.aspx.cs">
+    <Compile Include="Private\Alumno\InstanciarTareaEstudiante.aspx.cs">
       <DependentUpon>InstanciarTareaEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Alumno\InstanciarTareaEstudiante.aspx.designer.cs">
+    <Compile Include="Private\Alumno\InstanciarTareaEstudiante.aspx.designer.cs">
       <DependentUpon>InstanciarTareaEstudiante.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\Profesor.aspx.cs">
+    <Compile Include="Private\Profesor\Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\Profesor.aspx.designer.cs">
+    <Compile Include="Private\Profesor\Profesor.aspx.designer.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publico\Registro.aspx.cs">
+    <Compile Include="Public\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Publico\Registro.aspx.designer.cs">
+    <Compile Include="Public\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Profesor\VerEstadisticas.aspx.cs">
+    <Compile Include="Private\Profesor\VerEstadisticas.aspx.cs">
       <DependentUpon>VerEstadisticas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Profesor\VerEstadisticas.aspx.designer.cs">
+    <Compile Include="Private\Profesor\VerEstadisticas.aspx.designer.cs">
       <DependentUpon>VerEstadisticas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Privado\Alumno\VerTareasEstudiante.aspx.cs">
+    <Compile Include="Private\Alumno\VerTareasEstudiante.aspx.cs">
       <DependentUpon>VerTareasEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Alumno\VerTareasEstudiante.aspx.designer.cs">
+    <Compile Include="Private\Alumno\VerTareasEstudiante.aspx.designer.cs">
       <DependentUpon>VerTareasEstudiante.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

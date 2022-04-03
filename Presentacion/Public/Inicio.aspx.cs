@@ -37,12 +37,12 @@ namespace Presentacion
                         String tipo = ln.getRol(correo_text.Text);
                         if (tipo.Equals("Alumno"))
                         {
-                            FormsAuthentication.SetAuthCookie("alumno", false);//false = cookie tmp
+                            FormsAuthentication.SetAuthCookie("Alumno", false);//false = cookie tmp
                             Response.Redirect("http://hads22-07.azurewebsites.net/Alumno.aspx");
                         }
                         else
                         {
-                            FormsAuthentication.SetAuthCookie("profesor", false);//false = cookie tmp
+                            FormsAuthentication.SetAuthCookie("Profesor", false);//false = cookie tmp
                             Response.Redirect("http://hads22-07.azurewebsites.net/Profesor.aspx");
                         }
                     }

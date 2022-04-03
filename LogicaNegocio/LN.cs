@@ -47,12 +47,6 @@ namespace LogicaNegocio
             }
         }
 
-        private String getHash(String text)
-        {
-            byte[] bytes = Encoding.ASCII.GetBytes(text);
-            return Encoding.ASCII.GetString(hash.ComputeHash(bytes));
-        }
-
         /// <summary>
         /// método que realiza una llamada al método de insertar datos de la base de datos.
         /// </summary>
@@ -72,13 +66,6 @@ namespace LogicaNegocio
             return resul;
         }
 
-        /// <summary>
-        /// método que realiza una llamada al método actulizar codigo de contraseña de la base de datos y
-        /// lo ejecuta con los parámetros indicados.
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns>codigo de password</returns>
-        /// 
         public String getHash(String text)
         {
             using (var md5Hash = MD5.Create())
